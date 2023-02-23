@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p><br>Topic: {{news.topic}}<br></p>
+<p>Author: {{news.author}}<br></p>
+<p>Text: {{news.text}}<br></p>
+<p>Create time: {{news.create_time}}<br></p>
+<p>Last edit time: {{news.last_edit_time}}<br></p>
+
+{% if user.is_authenticated %}
+<a href ="update">
+    <button type="update">Edit</button> 
+</a>
+{% endif %}
+
+{% endblock %}
